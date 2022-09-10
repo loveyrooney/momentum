@@ -1,6 +1,6 @@
-const imgs = ["4.jpg", "5.jpg","7.jpg", "8.jpg"]
+const imgs = ["IMG_0706.jpg", "IMG_1026.jpg","IMG_1250.jpg", "IMG_7634.jpg"];
 
-const randomimg = imgs[Math.floor(Math.random() * quotes.length)]
+const randomimg = imgs[Math.floor(Math.random() * quotes.length)];
 
 const bgimg = document.createElement("img");
 const img = document.querySelector("#img");
