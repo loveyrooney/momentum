@@ -5,7 +5,7 @@ const randomimg = imgs[Math.floor(Math.random() * quotes.length)];
 const bgimg = document.createElement("img");
 const img = document.querySelector("#img");
 
-bgimg.src = `C:/Users/natak/Desktop/Coder/web/momentum/img/${randomimg}`;
+bgimg.src = `img/${randomimg}`;
 
 bgimg.style.opacity = '60%';
 bgimg.style.width = '100%';
