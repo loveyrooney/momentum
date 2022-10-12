@@ -12,13 +12,14 @@
     <div id = "textbody">
       <h1 id="title">Hello, world</h1>
         <form id="login" class="hidden">
-          <input required 
+          <input required id="logininput"
             maxlength ="12" 
-            type="text" 
+            type="text" style="width:150px"
             placeholder="ID"/>
-          <input type="submit" value="Log In"/>
+          <input type="submit" id="loginbtn" value="Log In" style="width:80px;"/>
         </form>
         <h1 id = "greeting" class="hidden"></h1>
+        <br>
         <form id="todo">
          <input required 
           type="text" class="todoinput"
@@ -29,8 +30,20 @@
         <div id = "weather">
           <span></span>
           <span></span>
-        </div><br>
-        <div id = "quotes">
+        </div>
+        <div class="block">
+          <p>This is simple random game. Try right now!</p>
+          <form id="casino">
+            <input required type="number" id = "chose" min="0" placeholder="Choose one"/>
+            <span>out of</span>
+            <input required type="number" id="range" min="0" placeholder="Set limit"/>
+            <button id = "casinobtn">Random!</button>
+          </form>
+           <span id="first"></span>
+           <span id="last"></span>
+        </div>
+        <h4 id = "Dday"></h4>
+        <div id = "quotes" class="block">
           <span></span><br>
           <span></span>
         </div>
@@ -41,5 +54,6 @@
   <script src="JS/background.js"></script>
   <script src="JS/todo.js"></script>
   <script src="JS/weather.js"></script>
+  <script src="JS/casino.js"></script>
 </body>
 </html>

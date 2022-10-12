@@ -17,6 +17,18 @@ function getclock() {
 getclock();
 setInterval(getclock, 1000);
 
+const Dday = document.querySelector("#Dday")
+
+function dDay(){
+    const christmas = new Date("2022-12-25");
+    const today = new Date();
+    const d = Math.floor((christmas-today)/(1000*60*60*24));
+    Dday.innerText = `CRHISTMAS🎄 D - ${d}`
+}
+
+dDay();
+setInterval(dDay, 86400);
+
 /* setInterval : 계속해서 함수를 실행하고 싶을때. setInterval(함수이름, 몇ms마다 실행)
 setTimeout : 함수를 특정 시간에 실행하고 싶을때. setTimeout(함수이름, 몇 ms후에 실행)
 자바스크립트 내에는 많은 기능들이 있는데 그중에는 현재 날짜 및 시각의 요소를 가지고 있음. 
