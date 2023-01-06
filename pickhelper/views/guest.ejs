@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick Helper - 방문자 후기</title>
+</head>
+<body>
+    <header>
+        <h1>Pick Helper</h1>
+        <h2>이런 상황에서 이용했어요😍</h2>
+    </header>
+    <nav>
+        <ul>
+            <li onclick="sadariboard()">사다리 타기</li>
+            <li onclick="rouletteboard()">원판 돌리기</li>
+            <li onclick="dungleboard()">둥글게 둥글게</li>
+            <li onclick="tournamentboard()">월드컵</li>
+        </ul>
+    </nav>
+    <article>
+        <div class="sadariboard">
+            <div class="form">
+                <input type="text" name="writer" placeholder="작성자 닉네임"/>
+                <input type="text" name="comment" placeholder="어떤 상황에서 이용하셨나요?"/>
+                <button type="button" onclick="sadariupload()">등록</button>
+            </div>
+            <div class="remove">
+                <input type="text" name="writer" placeholder="작성자 닉네임"/>
+                <button type="button" onclick="sadarimy()">내글보기</button>
+            </div>
+            <div class="board">
+                <table class="findAll">
+                    <tr>
+                        <td>코멘트</td>
+                        <td>작성자</td>
+                    </tr>
+                </table>
+                <table class="findOne">
+                    <tr>
+                        <td>코멘트</td>
+                        <td>삭제</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="rouletteboard">
+            <div class="form">
+                <input type="text" name="writer"placeholder="작성자 닉네임"/>
+                <input type="text" name="comment" placeholder="어떤 상황에서 이용하셨나요?"/>
+                <button type="button" onclick="rouletteupload()">등록</button>
+            </div>
+            <div class="remove">
+                <input type="text" name="writer" placeholder="작성자 닉네임"/>
+                <button type="button" onclick="sadarimy()">내글보기</button>
+            </div>
+            <div class="board">
+                <table class="findAll">
+                    <tr>
+                        <td>코멘트</td>
+                        <td>작성자</td>
+                    </tr>
+                </table>
+                <table class="findOne">
+                    <tr>
+                        <td>코멘트</td>
+                        <td>삭제</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="dungleboard">
+            <div class="form">
+                <input type="text" name="writer" placeholder="작성자 닉네임"/>
+                <input type="text" name="comment" placeholder="어떤 상황에서 이용하셨나요?"/>
+                <button type="button" onclick="dungleupload()">등록</button>
+            </div>
+            <div class="remove">
+                <input type="text" name="writer" placeholder="작성자 닉네임"/>
+                <button type="button" onclick="sadarimy()">내글보기</button>
+            </div>
+            <div class="board">
+                <table class="findAll">
+                    <tr>
+                        <td>코멘트</td>
+                        <td>작성자</td>
+                    </tr>
+                </table>
+                <table class="findOne">
+                    <tr>
+                        <td>코멘트</td>
+                        <td>삭제</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tournamentboard">
+            <div class="form">
+                <input type="text" name="writer" placeholder="작성자 닉네임"/>
+                <input type="text" name="comment" placeholder="어떤 상황에서 이용하셨나요?"/>
+                <button type="button" onclick="tournamentupload()">등록</button>
+            </div>
+            <div class="remove">
+                <input type="text" name="writer" placeholder="작성자 닉네임"/>
+                <button type="button" onclick="sadarimy()">내글보기</button>
+            </div>
+            <div class="board">
+                <table class="findAll">
+                    <tr>
+                        <td>코멘트</td>
+                        <td>작성자</td>
+                    </tr>
+                </table>
+                <table class="findOne">
+                    <tr>
+                        <td>코멘트</td>
+                        <td>삭제</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </article>
+    <footer><p>programed by rooney</p></footer>
+</body>
+</html>
