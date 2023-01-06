@@ -1,0 +1,37 @@
+body {background-color: cadetblue; text-align: center; margin:0; padding:0; width: 100%; height: 100%;}
+.hidden {display:none;}
+.elements { padding: 3%;}
+.todoinput {display: inline-block; width: 60%; height:30px; line-height: 10px; text-align: center; font-size: 1rem; 
+            border-radius: 5px; border:2px rgba(211, 211, 211, 0.575);
+            box-shadow: 0px 0px 2px 2px rgba(220, 220, 220, 0.575);}
+ul li { list-style: none; font-size: 20px;}
+#span, #span2 {font-size: 1.3rem;}
+
+footer {background-color: rgba(226, 226, 226, 0.277); padding:1%; height:10%;} 
+
+#modalbg {position:absolute; z-index: 3; width: 100%; height: 120%; background-color: rgba(172, 172, 172, 0.688);}
+#modalwindow {position: absolute; z-index:4; width: 40%; height: 40%; left:30%; top:15%; background-color:rgba(255, 255, 255, 0.934);
+              border-radius: 10px; box-shadow: 0px 0px 2px 2px rgba(220, 220, 220, 0.575);  }
+
+#randomform, #todosection {display: block; padding:2%; width:35%; height:10%; margin:0% auto 1% auto;
+              border:3px rgba(255, 244, 244, 0.277); border-radius: 10px; background-color: rgba(226, 226, 226, 0.277);
+              backdrop-filter: blur( 13.5px );
+              border-radius: 10px;
+              border: 1px solid rgba( 255, 255, 255, 0.18 );}
+
+#logintext {display: inline-block; width: 150px; height:30px; line-height: 10px; text-align: center; font-size: 1rem; 
+            border-radius: 5px; border:2px rgba(211, 211, 211, 0.575);
+            box-shadow: 0px 0px 2px 2px rgba(220, 220, 220, 0.575);}
+#loginbtn, #modalclose { display:inline-block; width:70px; height:30px; font-size: 1rem; background-color: rgba(191, 191, 191, 0.422); 
+            border-radius:5px; border: 2px;
+            box-shadow: 0px 0px 2px 2px rgba(220, 220, 220, 0.575);}
+#loginbtn:hover { background-color:rgba(228, 226, 226, 0.622); color:white; }
+
+#range, #guess { width: 110px; height:30px; text-align: center; font-size: 1rem; 
+                 border-radius:20px; border:2px rgba(211, 211, 211, 0.575); 
+                 box-shadow: 0px 0px 2px 2px rgba(220, 220, 220, 0.575);}
+#btn, #color { width:100px; height:35px; font-size: 1em; background-color: rgba(191, 191, 191, 0.422);
+               border-radius: 20px; border: 2px rgba(65, 65, 65, 0.575); 
+               box-shadow: 0px 0px 2px 2px rgba(220, 220, 220, 0.575);}
+#btn:hover, #color:hover {background-color:rgba(228, 226, 226, 0.622); color:white;}
+

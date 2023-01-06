@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Momentum</title>
+    <style></style>
+</head>
+<body>
+  <div id="modalbg" class="hidden">
+    <div id="modalwindow">
+        <h3>Hello, world!</h3>
+        <p>welcome to Hello world! This is javascript practice page.</p>
+        <button id="modalclose">close</button>
+    </div>
+  </div>
+   <div id="personal" class="elements">
+    <h1 id="title">Hello, world</h1>
+    <form id="login" class="hidden">
+        <input required id="logintext" maxlength ="12" type="text" placeholder="ID"/>
+        <input type="submit" id="loginbtn" value="Sign In"/>
+    </form>
+    <h1 id = "greeting" class="hidden"></h1>
+   </div>  
+   <div id="todosection" class="elements">
+    <form id="todo">
+      <p>TodoList is members only!</p>
+      <input required 
+       type="text" class="todoinput"
+       placeholder="Write a To Do and Press Enter" disabled/>
+     </form>
+     <ul id="todolist"></ul>
+   </div>
+   <div id = "randomform" class="elements">
+    <p>This is simple random game. Try right now!</p>
+    <form id="random">
+      <input required type="number" id="guess" min="0" placeholder="Choose one"/>
+      <span style="font-size:20px;">out of </span>
+      <input required type="number" id="range"  min="0" placeholder="Set limit"/>
+      <br>
+      <br>
+      <button id="btn">Random!</button>
+    </form><br>
+     <span id="span"></span><br>
+     <span id="span2"></span>
+   </div> 
+   <div id="setting" class="elements">
+    <p id="today" style="font-size:1.3rem; font-weight:bold; margin:0;"></p>
+    <p class="clock" style="font-size:1.1rem; font-weight:bold; margin: 0.5% 0% 2% 0%;"></p>
+    <button id="color">Color</button>
+   </div> 
+   <footer>
+    <span id="quote"></span><br>
+    <span id="author"></span>
+   </footer>
+   <script src="app.js"></script>
+</body>
+</html>
