@@ -15,7 +15,7 @@ footer {position: relative; margin: 0; width: 100%; height: 50px;}
            width: 46%; height: 38%; border-radius: 10px;}
 .gamebox:hover {font-size: 1.5rem; font-weight: 0; line-height: 700%; cursor:pointer;
                 color: white; text-shadow: 0px 2px 2px grey; background-color:rgb(81, 110, 205);}
-.sadari { background-color: bisque;}
+.jebi { background-color: bisque;}
 .roulette { left: 47%;background-color: aquamarine;}
 .dungle { top: 40%; background-color: rgb(255, 152, 243);}
 .tournament { left: 47%; top: 40%; background-color: rgb(250, 255, 161);}
