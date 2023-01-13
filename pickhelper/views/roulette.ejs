@@ -5,8 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pick Helper - 원판 돌리기</title>
+    <link rel="stylesheet" href="../public/css/roulette.css">
 </head>
 <body>
-    
+    <header>
+        <h3>Pick Helper</h3>
+        <h1>원판 돌리기</h1>
+        <div id="subtitle">
+            <span class="subtitle">파이 게임🍕을 원하신다면</span><br/>
+            <span class="subtitle">지금 바로 원판을 돌려보세요!👇</span>
+        </div>
+    </header>
+    <aside>
+        <p>파이 개수
+            <input type="number" name="piecount" min="2" max="8" placeholder="2~8개 까지 가능해요!"/>
+            <button type="button" onclick="roulettemake()">만들기</button>
+        </p>
+    </aside>
+    <article>
+        <div class="round two d-none">
+            <input type="text"/>
+            <input type="text"/>
+        </div><br>
+        <div class="round three d-none">
+            <% for(let i=1; i<4; i++) { %>
+                <input type="text"/>
+            <% } %>
+        </div><br>
+        <div class="round four d-none">
+            <% for(let j=1; j<5; j++) { %>
+                <input type="text"/>
+            <% } %>
+        </div><br>
+        <div class="round five d-none">
+            <% for(let k=1; k<6; k++) { %>
+                <input type="text"/>
+            <% } %>
+        </div><br>
+        <div class="round six d-none">
+            <% for(let l=1; l<7; l++) { %>
+                <input type="text"/>
+            <% } %>
+        </div><br>
+        <div class="round seven d-none">
+            <% for(let m=1; m<8; m++) { %>
+                <input type="text"/>
+            <% } %>
+        </div><br>
+        <div class="round eight d-none">
+            <% for(let n=1; n<9; n++) { %>
+                <input type="text"/>
+            <% } %>
+        </div>
+        <h3><a href="/">다른 게임 하러 가기</a></h3>
+    </article>
+    <footer><p>programed by rooney</p></footer>
+    <script>
+        const piecount = $("input[name='piecount']").val();
+        function roulettemake() {
+            if(piecount == 2) $(".two").removeClass("d-none");
+            else if(piecount == 3) $(".three").removeClass("d-none");
+            else if(piecount == 4) $(".four").removeClass("d-none");
+            else if(piecount == 5) $(".five").removeClass("d-none");
+            else if(piecount == 6) $(".six").removeClass("d-none");
+            else if(piecount == 7) $(".seven").removeClass("d-none");
+            else $(".eight").removeClass("d-none");
+        }
+    </script>
 </body>
 </html>
