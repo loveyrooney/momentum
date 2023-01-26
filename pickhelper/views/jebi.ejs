@@ -27,6 +27,7 @@
                     <option value="<%=i%>"><%=i%>개</option>
                     <% } %>
                 </select>
+            </p>   
             <p class="select">제비 유형
                 <select name="content">
                     <option value="">제비의 유형을 선택하세요</option>
@@ -34,13 +35,13 @@
                     <option value="king">왕 뽑기</option>
                     <option value="custom">커스텀 설정</option>
                 </select>
+            </p>    
             <fieldset>
                 <legend>커스텀 설정</legend>
                 <span>제비 안에 들어갈 내용을 적어주세요.</span><br>
                 <span>제비의 개수와 들어갈 내용의 개수가 같아야 해요!👌</span><br>
                 <input type="text" name="custom" placeholder="ex) 마피아, 시민, 경찰"/>
             </fieldset>
-            </p>
             <button type="submit">만들기</button>
         </form>
     </aside>
