@@ -7,11 +7,13 @@ a:hover { font-size: 1.5rem; font-weight: bold;} */
 
 /* article { padding:3%; height: 2000px; background-color: bisque;} */
 
-.round {display: inline-block; width: 300px; height: 300px; border-radius: 50%; z-index: 1;}
-.two { background-image: linear-gradient(red 50% 50% ,blue 50% 50%);}
-.three { background-image:conic-gradient(red 0deg,red 120deg, blue 120deg, blue 240deg, yellow 240deg, yellow 360deg);}
-.four {background:conic-gradient(yellowgreen 0deg, yellowgreen 90deg, red 90deg, red 180deg, yellow 180deg, yellow 270deg, blue 270deg, blue 360deg);}
-.five { background:conic-gradient(yellowgreen 0deg, yellowgreen 72deg, red 72deg, red 144deg, yellow 144deg, yellow 216deg, blue 216deg, blue 288deg, skyblue 288deg, skyblue 360deg);}
-.six { background:conic-gradient(yellowgreen 0deg, yellowgreen 60deg, red 60deg, red 120deg, yellow 120deg, yellow 180deg, blue 180deg, blue 240deg, skyblue 240deg, skyblue 300deg, grey 300deg, grey 360deg);}
-.seven { background:conic-gradient(yellowgreen 0deg, yellowgreen 51deg, red 51deg, red 102deg, yellow 102deg, yellow 153deg, blue 153deg, blue 204deg, skyblue 204deg, skyblue 256deg, grey 256deg, grey 307deg, orange 307deg, orange 360deg);}
-.eight { background:conic-gradient(yellowgreen 0deg, yellowgreen 45deg, red 45deg, red 90deg, yellow 90deg, yellow 135deg, blue 135deg, blue 180deg, skyblue 180deg, skyblue 225deg, grey 225deg, grey 270deg, orange 270deg, orange 315deg, purple 315deg, purple 360deg);}
+.round {display: inline-block; width: 300px; height: 300px; border-radius: 50%;
+        margin: 10%; position: relative;}
+.pie2 { background-image: linear-gradient(red 50% 50% ,blue 50% 50%);}
+.pie3 { background-image:conic-gradient(red 0deg,red 120deg, blue 120deg, blue 240deg, yellow 240deg, yellow 360deg);}
+.pie4 {background:conic-gradient(yellowgreen 0deg, yellowgreen 90deg, red 90deg, red 180deg, yellow 180deg, yellow 270deg, blue 270deg, blue 360deg);}
+.pie5 { background:conic-gradient(yellowgreen 0deg, yellowgreen 72deg, red 72deg, red 144deg, yellow 144deg, yellow 216deg, blue 216deg, blue 288deg, skyblue 288deg, skyblue 360deg);}
+.pie6 { background:conic-gradient(yellowgreen 0deg, yellowgreen 60deg, red 60deg, red 120deg, yellow 120deg, yellow 180deg, blue 180deg, blue 240deg, skyblue 240deg, skyblue 300deg, grey 300deg, grey 360deg);}
+.pie7 { background:conic-gradient(yellowgreen 0deg, yellowgreen 51deg, red 51deg, red 102deg, yellow 102deg, yellow 153deg, blue 153deg, blue 204deg, skyblue 204deg, skyblue 256deg, grey 256deg, grey 307deg, orange 307deg, orange 360deg);}
+.pie8 { background:conic-gradient(yellowgreen 0deg, yellowgreen 45deg, red 45deg, red 90deg, yellow 90deg, yellow 135deg, blue 135deg, blue 180deg, skyblue 180deg, skyblue 225deg, grey 225deg, grey 270deg, orange 270deg, orange 315deg, purple 315deg, purple 360deg);}
+

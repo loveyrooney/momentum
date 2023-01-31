@@ -16,6 +16,7 @@ function App() {
         <Route path="/dungle" element={<Dungle/> } />
         <Route path="/tournament" element={<Tournament/> } />
         <Route path="/guest" element={<Guest/> } />
+        <Route path='/*' element={<Index/>}/>  
       </Routes>
     </div>
   );
