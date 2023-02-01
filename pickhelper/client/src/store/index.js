@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import comment from './comment';
 import admin from './admin';
+import pieprops from './pieprops';
 
 export default combineReducers({
-  comment, admin
+  admin, pieprops
 });

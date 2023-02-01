@@ -1,19 +1,16 @@
 import React from 'react';
 import { useState } from 'react';
 import { useRef } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Header from './Header';
 import '../css/roulette.css';
-import MyPieInput2 from './MyPieInput2';
-import MyPieInput3 from './MyPieInput3';
-import MyPieInput4 from './MyPieInput4';
-import MyPieInput5 from './MyPieInput5';
-import MyPieInput6 from './MyPieInput6';
-import MyPieInput7 from './MyPieInput7';
-import MyPieInput8 from './MyPieInput8';
+import Board from './Board';
+import { keyframe } from '../store/pieprops';
 
 const Roulette = () => {
     const headinfo = useSelector((state)=>state.admin.roulette);
+    const pie = useSelector((state)=>state.pieprops);
+    const dispatch = useDispatch();
     const pieCountRef = useRef();
     const pieboardRef = useRef();
     // const rouletteBoardRef = useRef();
@@ -44,46 +41,48 @@ const Roulette = () => {
         } 
     }
 
-        // else {
-        //     return <MyPieInput8/>
-        //     // rouletteBoardRef.current.className = `round pie${piecount}`;
-        //     // for (let i=1; i<piecount+1; i++) {
-        //     //     countArr.push(i);
-        //     // }
-        //     // console.log(countArr);
-        //     // let countArr_copy = [...countArr];
-        //     // setCountArr(countArr_copy);
-        //     // pieboardRef.current.className = 'pieboard';
-        // }  
-
+    function rotate() {
+        dispatch(keyframe({
+            pieChannel: view,
+            stopDeg:`${360 + Math.floor(Math.random()*100)}deg`, 
+        }));
+        console.log(pie);
+    }
     function reload() {
-        // setCountArr([]);
+        dispatch(keyframe({
+            pieChannel: view,
+            stopDeg:'0deg', 
+        }));
         pieboardRef.current.className = 'd-none';
 
     }
-    
+        
     return (
         <>
             <Header obj={headinfo}/>
-            <div className='pieset'>파이 개수
-                <input ref={pieCountRef} type="number" name="piecount" min="2" max="8" placeholder="2~8개 까지 가능해요!"/>
+            <div className='pieset'>
+                <span>파이 개수</span>
+                <input ref={pieCountRef} type="number" name="piecount" min="2" max="8" placeholder="2~8개 까지 가능"/>
                 <button type="button" onClick={roulettemake}>만들기</button>
             </div>
             <div ref={pieboardRef} className='pieboard d-none'>
-                {/* <div ref={rouletteBoardRef} className='round'>
-                    {countArr.map((el,index)=><input key={index} length={el.length}/>)}
-                </div> */}
-                { view === 'pie2' && <MyPieInput2/>}
-                { view === 'pie3' && <MyPieInput3/>}
-                { view === 'pie4' && <MyPieInput4/>}
-                { view === 'pie5' && <MyPieInput5/>}
-                { view === 'pie6' && <MyPieInput6/>}
-                { view === 'pie7' && <MyPieInput7/>}
-                { view === 'pie8' && <MyPieInput8/>}
+                { view === 'pie2' || pie.pie2.stopDeg !== '0deg' ? <Board pieCount={pie.pie2.pieCount} pieColor={pie.pie2.pieColor} startDeg={pie.pie2.startDeg} stopDeg={pie.pie2.stopDeg} left={pie.pie2.left} top={pie.pie2.top}/> : ''}
+                { view === 'pie3' || pie.pie3.stopDeg !== '0deg' ? <Board pieCount={pie.pie3.pieCount} pieColor={pie.pie3.pieColor} startDeg={pie.pie3.startDeg} stopDeg={pie.pie3.stopDeg} left={pie.pie3.left} top={pie.pie3.top}/> : ''}
+                { view === 'pie4' || pie.pie4.stopDeg !== '0deg' ? <Board pieCount={pie.pie4.pieCount} pieColor={pie.pie4.pieColor} startDeg={pie.pie4.startDeg} stopDeg={pie.pie4.stopDeg} left={pie.pie4.left} top={pie.pie4.top}/> : ''}
+                { view === 'pie5' || pie.pie5.stopDeg !== '0deg' ? <Board pieCount={pie.pie5.pieCount} pieColor={pie.pie5.pieColor} startDeg={pie.pie5.startDeg} stopDeg={pie.pie5.stopDeg} left={pie.pie5.left} top={pie.pie5.top}/> : ''}
+                { view === 'pie6' || pie.pie2.stopDeg !== '0deg' ? <Board pieCount={pie.pie6.pieCount} pieColor={pie.pie6.pieColor} startDeg={pie.pie6.startDeg} stopDeg={pie.pie6.stopDeg} left={pie.pie6.left} top={pie.pie6.top}/> : ''}
+                { view === 'pie7' || pie.pie2.stopDeg !== '0deg' ? <Board pieCount={pie.pie7.pieCount} pieColor={pie.pie7.pieColor} startDeg={pie.pie7.startDeg} stopDeg={pie.pie7.stopDeg} left={pie.pie7.left} top={pie.pie7.top}/> : ''}
+                { view === 'pie8' || pie.pie2.stopDeg !== '0deg' ? <Board pieCount={pie.pie8.pieCount} pieColor={pie.pie8.pieColor} startDeg={pie.pie8.startDeg} stopDeg={pie.pie8.stopDeg} left={pie.pie8.left} top={pie.pie8.top}/> : ''}
                 <br/>
-                <button type="button" onClick={reload}>다시하기</button>
+                {view === 'pie2' && <button className="piebtn" type="button" onClick={rotate}>돌리기</button>}
+                {view === 'pie3' && <button className="piebtn" type="button" onClick={rotate}>돌리기</button>}
+                {view === 'pie4' && <button className="piebtn" type="button" onClick={rotate}>돌리기</button>}
+                {view === 'pie5' && <button className="piebtn" type="button" onClick={rotate}>돌리기</button>}
+                {view === 'pie6' && <button className="piebtn" type="button" onClick={rotate}>돌리기</button>}
+                {view === 'pie7' && <button className="piebtn" type="button" onClick={rotate}>돌리기</button>}
+                {view === 'pie8' && <button className="piebtn" type="button" onClick={rotate}>돌리기</button>}
+                <button className="piebtn" type="button" onClick={reload}>다시하기</button>
             </div>
-            <br/>
             <h3><a href="/">다른 게임 하러 가기</a></h3>
             <footer><p>programed by rooney</p></footer>
         </>

@@ -7,8 +7,8 @@ const Header = (props) => {
             <h3>Pick Helper</h3>
             <h1>{title}</h1>
             <div id="subtitle">
-                <span class="subtitle">{subtitle1}</span><br/>
-                <span class="subtitle">{subtitle2}</span>
+                <span className="subtitle">{subtitle1}</span><br/>
+                <span className="subtitle">{subtitle2}</span>
             </div>
         </header>
     );
