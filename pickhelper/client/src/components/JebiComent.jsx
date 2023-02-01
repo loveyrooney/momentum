@@ -1,13 +1,13 @@
 import React from 'react';
 import GuestHeader from './GuestHeader';
 
-const Guest = () => {
+const JebiComent = () => {
     return (
         <>
             <GuestHeader/>
-            <footer><p>programed by rooney</p></footer>
+            <p>JebiComent</p>
         </>
     );
 };
 
-export default Guest;
+export default JebiComent;

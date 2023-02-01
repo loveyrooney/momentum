@@ -1,3 +1,4 @@
+import '../css/roulette.css';
 import styled, { keyframes } from "styled-components";
 
 const MyInput = styled.input`
@@ -24,8 +25,9 @@ const MyBoard = styled.div`
     width: 300px; 
     height: 300px; 
     border-radius: 50%;
-    margin: 0 10% 10% 10%; 
+    margin: 5%; 
     position: relative;
+    z-index: 1;
     background: conic-gradient(${(props)=>props.pieColor});
     animation-name: ${(props)=>ani(props.startDeg, props.stopDeg)};
     animation-duration: 0.1s;

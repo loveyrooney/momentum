@@ -44,7 +44,7 @@ const Roulette = () => {
     function rotate() {
         dispatch(keyframe({
             pieChannel: view,
-            stopDeg:`${360 + Math.floor(Math.random()*100)}deg`, 
+            stopDeg:`${360 + Math.floor(Math.random()*10000)}deg`, 
         }));
         console.log(pie);
     }

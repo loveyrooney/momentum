@@ -1,13 +1,13 @@
 import React from 'react';
 import GuestHeader from './GuestHeader';
 
-const Guest = () => {
+const RouletteComent = () => {
     return (
         <>
             <GuestHeader/>
-            <footer><p>programed by rooney</p></footer>
+            <span>RouletteComent</span>
         </>
     );
 };
 
-export default Guest;
+export default RouletteComent;
