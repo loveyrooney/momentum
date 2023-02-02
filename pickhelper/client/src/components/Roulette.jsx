@@ -70,9 +70,9 @@ const Roulette = () => {
                 { view === 'pie3' || pie.pie3.stopDeg !== '0deg' ? <Board pieCount={pie.pie3.pieCount} pieColor={pie.pie3.pieColor} startDeg={pie.pie3.startDeg} stopDeg={pie.pie3.stopDeg} left={pie.pie3.left} top={pie.pie3.top}/> : ''}
                 { view === 'pie4' || pie.pie4.stopDeg !== '0deg' ? <Board pieCount={pie.pie4.pieCount} pieColor={pie.pie4.pieColor} startDeg={pie.pie4.startDeg} stopDeg={pie.pie4.stopDeg} left={pie.pie4.left} top={pie.pie4.top}/> : ''}
                 { view === 'pie5' || pie.pie5.stopDeg !== '0deg' ? <Board pieCount={pie.pie5.pieCount} pieColor={pie.pie5.pieColor} startDeg={pie.pie5.startDeg} stopDeg={pie.pie5.stopDeg} left={pie.pie5.left} top={pie.pie5.top}/> : ''}
-                { view === 'pie6' || pie.pie2.stopDeg !== '0deg' ? <Board pieCount={pie.pie6.pieCount} pieColor={pie.pie6.pieColor} startDeg={pie.pie6.startDeg} stopDeg={pie.pie6.stopDeg} left={pie.pie6.left} top={pie.pie6.top}/> : ''}
-                { view === 'pie7' || pie.pie2.stopDeg !== '0deg' ? <Board pieCount={pie.pie7.pieCount} pieColor={pie.pie7.pieColor} startDeg={pie.pie7.startDeg} stopDeg={pie.pie7.stopDeg} left={pie.pie7.left} top={pie.pie7.top}/> : ''}
-                { view === 'pie8' || pie.pie2.stopDeg !== '0deg' ? <Board pieCount={pie.pie8.pieCount} pieColor={pie.pie8.pieColor} startDeg={pie.pie8.startDeg} stopDeg={pie.pie8.stopDeg} left={pie.pie8.left} top={pie.pie8.top}/> : ''}
+                { view === 'pie6' || pie.pie6.stopDeg !== '0deg' ? <Board pieCount={pie.pie6.pieCount} pieColor={pie.pie6.pieColor} startDeg={pie.pie6.startDeg} stopDeg={pie.pie6.stopDeg} left={pie.pie6.left} top={pie.pie6.top}/> : ''}
+                { view === 'pie7' || pie.pie7.stopDeg !== '0deg' ? <Board pieCount={pie.pie7.pieCount} pieColor={pie.pie7.pieColor} startDeg={pie.pie7.startDeg} stopDeg={pie.pie7.stopDeg} left={pie.pie7.left} top={pie.pie7.top}/> : ''}
+                { view === 'pie8' || pie.pie8.stopDeg !== '0deg' ? <Board pieCount={pie.pie8.pieCount} pieColor={pie.pie8.pieColor} startDeg={pie.pie8.startDeg} stopDeg={pie.pie8.stopDeg} left={pie.pie8.left} top={pie.pie8.top}/> : ''}
                 <br/>
                 {view === 'pie2' && <button className="piebtn" type="button" onClick={rotate}>돌리기</button>}
                 {view === 'pie3' && <button className="piebtn" type="button" onClick={rotate}>돌리기</button>}

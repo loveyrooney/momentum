@@ -1,0 +1,6 @@
+.guestboard { padding:3%; margin:5%; border-radius: 20px; background-color:rgba(97, 127, 224, 0.765);}
+.commentinput {width: 200px; height: 30px; margin-top: 20px; border-radius: 5px; border-color: white; border-style: solid;}
+.commentbtn {margin: 3%; width: 50px; height: 30px; border-radius: 5px; border-color: white; background-color: white;
+    font-weight: bold; color: rgb(81, 110, 205); border-style: solid; cursor: pointer;}
+.d-none {display: none;}
+.comment {display: block; margin-top: 2%;}
