@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import GuestHeader from './GuestHeader';
+import GuestHeader from './Guest';
 import axios from 'axios';
 import '../css/guest.css';
 
@@ -7,53 +7,58 @@ import '../css/guest.css';
 const JebiComent = () => {
     const [jebidb, setJebidb] = useState([]);
     const commentRef = useRef();
+    const jebiTitle = useRef();
     useEffect(()=>{
         axios({
             method: 'get',
             url: 'http://localhost:8090/jebidb'
         })
         .then((res)=>{
-            console.log(res.data);
             setJebidb(res.data);
-            console.log('state',jebidb);
         });
     },[]);
     function createcomment() {
-        console.log(commentRef.current.value);
-        axios({
-            method: 'post',
-            url: 'http://localhost:8090/jebicreate',
-            data:{comment: commentRef.current.value} 
-        })
-        .then((res)=>{
-            console.log('fromserver',res.data);
-            setJebidb(res.data);
-        });
+        if(window.confirm('등록이 완료된 댓글은 수정/삭제가 불가능합니다. 정말 올리시겠어요?')) {
+            axios({
+                method: 'post',
+                url: 'http://localhost:8090/jebicreate',
+                data:{game: jebiTitle.current.id, comment: commentRef.current.value} 
+            })
+            .then((res)=>{
+                commentRef.current.value = '';
+                setJebidb(jebidb.concat(res.data));
+            });
+        } 
     }
-    function commenthover(e) {
-        e.target.children[0].className = '';
-    } 
-    function deletecomment(e) {
-        console.log('delete',e.target.parent);
-        /*axios({
-            method: 'post',
-            url: 'http://localhost:8090/jebidelete'
-            data: 
-        })*/
-    }
+    // function commenthover(e) {
+    //     e.target.parentElement.children[1].className = '';
+    // } 
+    // function deletecomment(e) {
+    //     console.log(e.target.parentElement.id);
+    //     alert()
+    //     e.target.parentElement.className = 'd-none';
+    //     axios({
+    //         method: 'post',
+    //         url: 'http://localhost:8090/jebidelete',
+    //         data: {id: e.target.parentElement.id}
+    //     })
+    //     .then((res)=>{
+    //         console.log('삭제완료');
+    //     })
+    // }
     return (
         <>
             <GuestHeader/>
-            <h3>JebiComent</h3>
+            <p className='title' id='jebi' ref={jebiTitle}>❤️제비뽑기❤️</p>
             <div className='guestboard'>
                 {jebidb.map((el)=> { return (
-                    <div className='comment' key={el.id} onClick={(e)=>{commenthover(e)}}>
-                        {el.comment}
-                        <span className='d-none' onClick={(e)=>{deletecomment(e)}}>❌</span>
+                    <div id={el.id} key={el.id}>
+                        <span className='comment'>{el.comment}</span>
+                        {/* <span className='d-none' onClick={(e)=>{deletecomment(e)}}>❌</span> */}
                     </div>
                 )})}
                 <input className='commentinput'ref={commentRef} placeholder='욕설이나 부적절한 언행은 삼가주세요!'/>
-                <button className='commentbtn' type="button" onClick={createcomment}>쓰기</button>
+                <button className='commentbtn' type="button" onClick={createcomment}>등록</button>
             </div>
             <footer><p>programed by rooney</p></footer>
         </>

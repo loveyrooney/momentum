@@ -4,7 +4,7 @@ import Jebi from "./components/Jebi";
 import Roulette from "./components/Roulette";
 import Dungle from "./components/Dungle";
 import Tournament from "./components/Tournament";
-import Guest from "./components/Guest";
+import Guest from './components/Guest';
 import JebiComent from './components/JebiComent';
 import RouletteComent from './components/RouletteComent';
 import DungleComent from './components/DungleComent';

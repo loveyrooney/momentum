@@ -25,7 +25,7 @@ const GuestHeader = () => {
     return (
         <>
             <header>
-                <h1>Pick Helper</h1>
+                <h1><a style={{fontSize: '1em'}} href='/'>Pick Helper</a></h1>
                 <h2>이런 상황에서 이용했어요😍</h2>
             </header>
             <Mynav>

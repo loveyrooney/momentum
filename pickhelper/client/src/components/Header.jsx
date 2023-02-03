@@ -6,7 +6,7 @@ const Header = (props) => {
         <header>
             <h3>Pick Helper</h3>
             <h1>{title}</h1>
-            <div id="subtitle">
+            <div>
                 <span className="subtitle">{subtitle1}</span><br/>
                 <span className="subtitle">{subtitle2}</span>
             </div>

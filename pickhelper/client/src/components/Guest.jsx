@@ -5,7 +5,6 @@ const Guest = () => {
     return (
         <>
             <GuestHeader/>
-            <footer><p>programed by rooney</p></footer>
         </>
     );
 };
