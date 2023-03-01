@@ -10,7 +10,7 @@ const TournamentComent = () => {
     useEffect(()=>{
         axios({
             method: 'get',
-            url: 'http://localhost:8090/tournamentdb'
+            url: `${process.env.REACT_APP_SERVER_URL}/tournamentdb`
         })
         .then((res)=>{
             setTournamentdb(res.data);
@@ -20,7 +20,7 @@ const TournamentComent = () => {
         if(window.confirm('등록이 완료된 댓글은 수정/삭제가 불가능합니다. 정말 올리시겠어요?')) {
             axios({
                 method: 'post',
-                url: 'http://localhost:8090/roulettecreate',
+                url: `${process.env.REACT_APP_SERVER_URL}/roulettecreate`,
                 data:{ game: tournamentTitle.current.id, 
                        comment: commentRef.current.value} 
             })

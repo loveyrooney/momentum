@@ -10,7 +10,7 @@ const DungleComent = () => {
     useEffect(()=>{
         axios({
             method: 'get',
-            url: 'http://localhost:8090/dungledb'
+            url: `${process.env.REACT_APP_SERVER_URL}/dungledb`
         })
         .then((res)=>{
             setDungledb(res.data);
@@ -20,7 +20,7 @@ const DungleComent = () => {
         if(window.confirm('등록이 완료된 댓글은 수정/삭제가 불가능합니다. 정말 올리시겠어요?')) {
             axios({
                 method: 'post',
-                url: 'http://localhost:8090/dunglecreate',
+                url: `${process.env.REACT_APP_SERVER_URL}/dunglecreate`,
                 data:{ game: dungleTitle.current.id, 
                        comment: commentRef.current.value} 
             })

@@ -1,0 +1,14 @@
+
+.d-none {display: none;}
+
+.dungleboard { margin: 5%; padding: 5%; height: auto; background-color: rgba(97, 127, 224, 0.765); border-radius: 10px;
+    display: block;}
+    /* flex-flow:row wrap; justify-content: space-around; align-items: stretch; */
+.dungleboard > p { width: 70%; margin:2% 15% 2% 15%; height: 60px; background-color: rgb(53, 52, 50);
+                    line-height: 60px; border-radius: 5px;}
+#lastP { width: 70%; margin:2% 15% 2% 15%; height: 60px; background-color: rgb(219, 52, 41);
+        line-height: 60px; border-radius: 5px;}
+.dungleboard > p:hover {background-color: rgb(67, 68, 70);}
+
+.dunglebtn {margin: 5%; width: 100px; height: 30px; border-radius: 5px; border-color: white; background-color: white;
+    font-weight: bold; color: rgb(81, 110, 205); border-style: solid; cursor: pointer;}

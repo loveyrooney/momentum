@@ -10,8 +10,8 @@ const JebiComent = () => {
     const jebiTitle = useRef();
     useEffect(()=>{
         axios({
-            method: 'get',
-            url: 'http://localhost:8090/jebidb'
+            method: 'get', 
+            url: `${process.env.REACT_APP_SERVER_URL}/jebidb`
         })
         .then((res)=>{
             setJebidb(res.data);
@@ -21,7 +21,7 @@ const JebiComent = () => {
         if(window.confirm('등록이 완료된 댓글은 수정/삭제가 불가능합니다. 정말 올리시겠어요?')) {
             axios({
                 method: 'post',
-                url: 'http://localhost:8090/jebicreate',
+                url: `${process.env.REACT_APP_SERVER_URL}/jebicreate`,
                 data:{game: jebiTitle.current.id, comment: commentRef.current.value} 
             })
             .then((res)=>{
