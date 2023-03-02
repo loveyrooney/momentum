@@ -41,7 +41,7 @@ const TournamentComent = () => {
                         {/* <span className='d-none' onClick={(e)=>{deletecomment(e)}}>❌</span> */}
                     </div>
                 )})}
-                <input className='commentinput'ref={commentRef} placeholder='욕설이나 부적절한 언행은 삼가주세요!'/>
+                <input className='commentinput'ref={commentRef} placeholder='욕설이나 부적절한 언행은 NOPE!'/>
                 <button className='commentbtn' type="button" onClick={createcomment}>등록</button>
             </div>
             <footer><p>programed by rooney</p></footer>

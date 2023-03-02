@@ -10,19 +10,32 @@ export function divide(payload) {
     for (let i = 0; i < total.length; i += classtotal) {
         dungleArr.push(total.slice(i, i + classtotal));
     }
-    return {
-        type: DIVIDE,
-        payload: dungleArr
+    if(total.length % payload.group == 0) {
+        return {
+            type: DIVIDE,
+            payload: {board: dungleArr, type:3}
+        }
+    } else {
+        return {
+            type: DIVIDE,
+            payload: {board: dungleArr, type:1}
+        }
     }
 }
 
 export function extra(payload) {
-    console.log(payload.extraArr);
-    const extraArr = payload.extraArr[payload.extraArr.length-1];
-    const groupArr = Array.from({length:payload.extraArr.length -1}, (v,i)=>i+1).sort(() => Math.random() - 0.5); 
+    let firstgroup = payload.firstArr.board; 
+    console.log(firstgroup);
+    const extraArr = firstgroup.pop();
+   // const groupArr = Array.from({length:firstgroup.length -1}, (v,i)=>i+1); 
+    let secondgroup = [...firstgroup];
+    for(let j=0; j<extraArr.length; j++) {
+        secondgroup[j].push(extraArr[j]);
+    }
+    
     return {
         type: EXTRA,
-        payload: {extragroup: extraArr, groupname: groupArr}
+        payload: { board: secondgroup, type:2}
     }
 }
 

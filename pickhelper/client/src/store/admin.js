@@ -17,7 +17,7 @@ const initState = {
         { 
             title: '둥글게둥글게',
             subtitle1: '빙글빙글 돌아가며 춤을 춥시다🎶',
-            subtitle2: '여러명을 소그룹으로 나누고 싶을때✅'
+            subtitle2: '여러명을 소그룹으로 배정하고 싶을때✅'
         }
     ,
     tournament: 

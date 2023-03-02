@@ -4,11 +4,15 @@
 .dungleboard { margin: 5%; padding: 5%; height: auto; background-color: rgba(97, 127, 224, 0.765); border-radius: 10px;
     display: block;}
     /* flex-flow:row wrap; justify-content: space-around; align-items: stretch; */
-.dungleboard > p { width: 70%; margin:2% 15% 2% 15%; height: 60px; background-color: rgb(53, 52, 50);
-                    line-height: 60px; border-radius: 5px;}
-#lastP { width: 70%; margin:2% 15% 2% 15%; height: 60px; background-color: rgb(219, 52, 41);
-        line-height: 60px; border-radius: 5px;}
-.dungleboard > p:hover {background-color: rgb(67, 68, 70);}
+.dungleboard > p { width: 90%; margin:2%; height: 100px; background-color: rgb(53, 52, 50);
+      line-height: 25px; border-radius: 5px; padding: 10px;}
+#lastP { width: 70%; margin:2% 15% 2% 15%; height: 70px; background-color: rgb(219, 52, 41);
+        line-height: 30px; border-radius: 5px; padding: 10px;}
+/*.dungleboard > p:hover {background-color: rgb(67, 68, 70);}*/
 
 .dunglebtn {margin: 5%; width: 100px; height: 30px; border-radius: 5px; border-color: white; background-color: white;
     font-weight: bold; color: rgb(81, 110, 205); border-style: solid; cursor: pointer;}
+
+form > input { width: 140px; height: 30px; margin-top: 10px;
+    border-radius: 5px; border-color: white; border-style: solid;}
+form > span {display: inline-block; font-size: 1.1rem; margin: 10px;}
