@@ -1,0 +1,16 @@
+
+
+textarea { width: 250px; height: 70px; margin-top: 10px;
+    border-radius: 5px; border-color: white; border-style: solid;}
+form > input {width: 20px; height: 20px;
+    border-radius: 5px; border-color: white; border-style: solid;}
+form > label {margin: 3%;}
+
+.topTeam { width:60%; height: 200px; margin:7% 20% 5% 20%; 
+            background-color: aqua;
+           line-height: 200px; font-size: 1.8em; font-weight: 600;
+           text-shadow: 0px 2px 2px grey; border-radius: 20px;}
+.bottomTeam {width:60%; height: 200px; margin:7% 20% 5% 20%; 
+            background-color: bisque;
+            line-height: 200px; font-size: 1.8em; font-weight: 600;
+            text-shadow: 0px 2px 2px grey; border-radius: 20px;}
