@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import Header from './Header';
 import { divide, extra } from '../store/dungle';
-import '../css/dungle.css';
+import './dungle.css';
 
 const Dungle = () => {
     const headinfo = useSelector((state)=>state.admin.dungle);
@@ -39,10 +39,10 @@ const Dungle = () => {
             <Header obj={headinfo}/>
             <form>
                 <span>총 인원</span>
-                <input ref={totalRef} type="number" min="10" max="100" placeholder=" 10~100명 까지 가능"/>
+                <input className='dungleInput' ref={totalRef} type="number" min="10" max="100" placeholder=" 10~100명 까지 가능"/>
                 <br/>
                 <span>그룹 수</span>
-                <input ref={groupRef} type="number" min="2" max="10" placeholder=" 2~10그룹 까지 가능"/>
+                <input className='dungleInput' ref={groupRef} type="number" min="2" max="10" placeholder=" 2~10그룹 까지 가능"/>
                 <br/>
                 <button className='dunglebtn' type="button" onClick={grouping}>배정하기</button>
             </form>

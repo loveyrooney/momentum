@@ -20,8 +20,8 @@ const Tournament = () => {
         <div>
             <Header obj={headinfo}/>
             <form>
-                <input ref={sixteenRef} type="radio" name="check" id="16"/><label htmlFor="16">16강</label>
-                <input ref={eightRef} type="radio" name="check" id="8"/><label htmlFor="8">8강</label>
+                <input className="tournaInput" ref={sixteenRef} type="radio" name="check" id="16"/><label htmlFor="16">16강</label>
+                <input className="tournaInput" ref={eightRef} type="radio" name="check" id="8"/><label htmlFor="8">8강</label>
                 <br/>
                 <span>후보 리스트</span>
                 <br/>
@@ -29,7 +29,7 @@ const Tournament = () => {
                 <br/>
                 <button className='dunglebtn' type="button" onClick={start}>시작!</button>
             </form>
-            <div className='tournamentBoard'>
+            <div className='d-none'>
                 <div className='topTeam'>잉글랜드</div>
                 <h3>VS</h3>
                 <div className='bottomTeam'>대한민국</div>
