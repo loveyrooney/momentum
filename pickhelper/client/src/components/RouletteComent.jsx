@@ -35,7 +35,7 @@ const RouletteComent = () => {
             <GuestHeader/>
             <p className='title' id='roulette' ref={rouletteTitle}>❤️룰렛 돌리기❤️</p>
             <div className='guestboard'>
-                {roulettedb.map((el)=> { return (
+                { roulettedb.length <1 ? <span className='comment'>comment를 등록해 보세요!</span> : roulettedb.map((el)=> { return (
                     <div id={el.id} key={el.id}>
                         <span className='comment'>{el.comment}</span>
                         {/* <span className='d-none' onClick={(e)=>{deletecomment(e)}}>❌</span> */}

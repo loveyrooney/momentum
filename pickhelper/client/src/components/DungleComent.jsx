@@ -35,7 +35,7 @@ const DungleComent = () => {
             <GuestHeader/>
             <p className='title' id='dungle' ref={dungleTitle}>❤️둥글게 둥글게❤️</p>
             <div className='guestboard'>
-                {dungledb.map((el)=> { return (
+                {dungledb.length <1 ? <span className='comment'>comment를 등록해 보세요!</span> : dungledb.map((el)=> { return (
                     <div id={el.id} key={el.id}>
                         <span className='comment'>{el.comment}</span>
                         {/* <span className='d-none' onClick={(e)=>{deletecomment(e)}}>❌</span> */}

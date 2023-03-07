@@ -30,28 +30,13 @@ const JebiComent = () => {
             });
         } 
     }
-    // function commenthover(e) {
-    //     e.target.parentElement.children[1].className = '';
-    // } 
-    // function deletecomment(e) {
-    //     console.log(e.target.parentElement.id);
-    //     alert()
-    //     e.target.parentElement.className = 'd-none';
-    //     axios({
-    //         method: 'post',
-    //         url: 'http://localhost:8090/jebidelete',
-    //         data: {id: e.target.parentElement.id}
-    //     })
-    //     .then((res)=>{
-    //         console.log('삭제완료');
-    //     })
-    // }
+  
     return (
         <>
             <GuestHeader/>
             <p className='title' id='jebi' ref={jebiTitle}>❤️제비뽑기❤️</p>
             <div className='guestboard'>
-                {jebidb.map((el)=> { return (
+                {jebidb.length <1 ? <span className='comment'>comment를 등록해 보세요!</span> : jebidb.map((el)=> { return (
                     <div id={el.id} key={el.id}>
                         <span className='comment'>{el.comment}</span>
                         {/* <span className='d-none' onClick={(e)=>{deletecomment(e)}}>❌</span> */}

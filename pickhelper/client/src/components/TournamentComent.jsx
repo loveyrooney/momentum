@@ -35,7 +35,7 @@ const TournamentComent = () => {
             <GuestHeader/>
             <p className='title' id='roulette' ref={tournamentTitle}>❤️월드컵❤️</p>
             <div className='guestboard'>
-                {tournamentdb.map((el)=> { return (
+                {tournamentdb.length <1 ? <span className='comment'>comment를 등록해 보세요!</span> : tournamentdb.map((el)=> { return (
                     <div id={el.id} key={el.id}>
                         <span className='comment'>{el.comment}</span>
                         {/* <span className='d-none' onClick={(e)=>{deletecomment(e)}}>❌</span> */}
