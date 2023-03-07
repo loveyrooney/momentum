@@ -13,6 +13,7 @@ const Roulette = () => {
     const dispatch = useDispatch();
     const pieCountRef = useRef();
     const pieboardRef = useRef();
+    const formRef = useRef();
     // const rouletteBoardRef = useRef();
     // const [ countArr, setCountArr ] = useState([]);
     const [view, setView] = useState('d-none');
@@ -37,7 +38,8 @@ const Roulette = () => {
             } else if (piecount === 7) {
                 setView('pie7');
             } else { setView('pie8'); }
-            pieboardRef.current.className = 'pieboard';    
+            pieboardRef.current.className = 'pieboard';  
+            formRef.current.className = 'd-none';  
         } 
     }
 
@@ -60,7 +62,7 @@ const Roulette = () => {
     return (
         <>
             <Header obj={headinfo}/>
-            <div className='pieset'>
+            <div ref={formRef} className='pieset'>
                 <span>파이 개수</span>
                 <input ref={pieCountRef} type="number" name="piecount" min="2" max="8" placeholder="2~8개 까지 가능"/>
                 <button type="button" onClick={roulettemake}>만들기</button>
