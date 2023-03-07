@@ -56,6 +56,7 @@ const Roulette = () => {
             stopDeg:'0deg', 
         }));
         pieboardRef.current.className = 'd-none';
+        formRef.current.className = "pieset";
 
     }
         
