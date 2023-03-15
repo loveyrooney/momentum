@@ -10,6 +10,12 @@ export function divide(payload) {
     for (let i = 0; i < total.length; i += classtotal) {
         dungleArr.push(total.slice(i, i + classtotal));
     }
+    if(total.length % payload.group > classtotal) {
+        let dungleArrcopy = dungleArr.slice(0,dungleArr.length-2);
+        dungleArrcopy = [...dungleArrcopy, [...dungleArr[dungleArr.length-2], ...dungleArr[dungleArr.length-1]]];
+        dungleArr = dungleArrcopy;
+        //console.log(dungleArr);
+    }
     if(total.length % payload.group == 0) {
         return {
             type: DIVIDE,
